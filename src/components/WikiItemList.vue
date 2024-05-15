@@ -1,19 +1,20 @@
 
 <template>
-    <div class="container">
-      <WikiItem v-for="(emoji, index) in emojis" :key="index" :emoji="emoji"/>
-    </div>
+
+      <WikiItem v-for="(item, index) in objArticles" :key="index" :item="item"/>
+    
+
 </template>
   
 
 
 <script setup>
 
-import { defineProps, ref, watch } from 'vue';
+import { defineProps, ref } from 'vue';
 
 import WikiItem from './WikiItem.vue';
 
-const props = defineProps(['emojis']);
+const props = defineProps(['objArticles']);
 
 
 </script>

@@ -5,11 +5,15 @@
 } */
 
 body{
+  font-family: "PT Sans", sans-serif;
   background: rgb(120,134,245);
   background: radial-gradient(circle, rgba(120,134,245,1) 0%, rgba(148,187,233,1) 100%);
 
 }
 
+a{
+  text-decoration: none;
+}
 input{
   outline: none;
 }
