@@ -6,6 +6,16 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    proxy: {
+      '/wiki': {
+        target: 'https://ru.wikipedia.org',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/wiki/, ''),
+      },
+    },
+  },
+  
   plugins: [
     vue(),
     vueJsx(),
